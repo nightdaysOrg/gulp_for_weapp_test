@@ -8,11 +8,14 @@ let cssmin = require("gulp-clean-css");
 let jsonmin = require("gulp-jsonminify2");
 let imagemin = require("gulp-imagemin");
 
-let js = ['gongfuyuan/*.js', 'gongfuyuan/**/*.js']
-let html = ['gongfuyuan/**/*.wxml']
-let css = ['gongfuyuan/*.wxss', 'gongfuyuan/**/*.wxss']
-let json = ['gongfuyuan/*.json', 'gongfuyuan/**/*.json']
-let image = ['gongfuyuan/**/*.png', 'gongfuyuan/**/*.jpg', 'gongfuyuan/**/*.jpeg']
+// 文件夹路径
+let base=''
+
+let js = [base+'/*.js', base+'/**/*.js']
+let html = [base+'/**/*.wxml']
+let css = [base+'/*.wxss', base+'/**/*.wxss']
+let json = [base+'/*.json', base+'/**/*.json']
+let image = [base+'/**/*.png', base+'/**/*.jpg', base+'/**/*.jpeg']
 
 //执行所有
 gulp.task("default", ['js', 'css', 'html', 'json', 'image'], function () {
